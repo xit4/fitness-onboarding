@@ -1,0 +1,12 @@
+.ProgressDots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 54px;
+  padding: 10px 0 20px 0;
+}
+
+.Dot:not(:first-child) {
+  margin-left: 10px;
+}

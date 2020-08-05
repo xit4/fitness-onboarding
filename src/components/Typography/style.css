@@ -1,0 +1,28 @@
+.Title {
+  font-size: 32px;
+  line-height: 37px;
+  letter-spacing: -0.2px;
+}
+.TitleCard {
+  font-size: 20px;
+  line-height: 23px;
+}
+.Paragraph {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+.LabelInput {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.2px;
+}
+.LabelBack {
+  font-size: 16px;
+  line-height: 19px;
+}
+.LabelButton {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2px;
+}

@@ -1,0 +1,11 @@
+.Dot {
+  height: 10px;
+  width: 10px;
+  background-color: var(--utilities-white-40);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.Dot.active {
+  background-color: white;
+}

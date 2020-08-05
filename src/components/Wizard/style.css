@@ -1,0 +1,6 @@
+.Wizard {
+  height: 100%;
+  background-color: var(--accent-main);
+  display: flex;
+  flex-direction: column;
+}

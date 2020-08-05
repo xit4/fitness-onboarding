@@ -1,0 +1,11 @@
+.WizardStep {
+  background-color: white;
+  border-radius: 40px 40px 0px 0px;
+  padding: 60px 30px;
+  flex: 1;
+}
+
+.WizardStep .TitleWrapper {
+  max-width: 197px;
+  font-weight: bold;
+}
