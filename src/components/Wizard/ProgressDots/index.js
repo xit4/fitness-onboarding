@@ -8,7 +8,7 @@ const ProgressDots = ({ numberOfSteps = 1, currentStep = 0 }) => {
       {Array(numberOfSteps)
         .fill(null)
         .map((_, i) => (
-          <Dot active={i <= currentStep} />
+          <Dot key={`dot#${i}`} active={i <= currentStep} />
         ))}
     </div>
   );

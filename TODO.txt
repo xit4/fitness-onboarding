@@ -1,0 +1,3 @@
+- animation on dots
+- dots clickable
+- proper validation on inputs (number parsing)
