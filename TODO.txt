@@ -1,3 +1,5 @@
 - animation on dots
 - dots clickable
 - proper validation on inputs (number parsing)
+- find a better way to render wizard steps
+- animation on button not disabled

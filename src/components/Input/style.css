@@ -1,0 +1,42 @@
+.InputWrapper {
+  position: relative;
+}
+
+.InputWrapper .LabelInput {
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  color: var(--utilities-gray-darker);
+}
+
+.InputWrapper.filled .LabelInput {
+  color: var(--utilities-black-70);
+}
+
+.Input {
+  height: 55px;
+  width: 100%;
+  padding: 16px 20px;
+  background-color: var(--utilities-gray);
+  border-radius: 20px;
+  border: 0;
+  color: var(--utilities-black-70);
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.2px;
+}
+
+.Input.unit {
+  padding: 16px 52px 16px 20px;
+}
+
+.Input::placeholder {
+  color: var(--utilities-gray-darker);
+  opacity: 1;
+}
+
+.Input:focus,
+.Input.filled {
+  background-color: white;
+  border: 3px solid var(--utilities-gray-darker);
+}

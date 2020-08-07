@@ -25,6 +25,8 @@ const Wizard = () => {
           title={`What's your weight, ${fullname}?`}
           placeholder="Your weight"
           value={weight}
+          inputType="number"
+          unit="Kg"
           onInputChange={(e) => setWeight(e.target.value)}
           onConfirmation={() => setCurrentStep(1)}
         />

@@ -1,0 +1,17 @@
+.Button {
+  height: 49px;
+  padding: 16px 20px;
+  border-radius: 20px;
+  border: 0;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.2px;
+  position: relative;
+  background-color: var(--utilities-black);
+  color: white;
+}
+
+.Button:disabled {
+  background-color: var(--utilities-gray);
+  color: var(--utilities-gray-darker);
+}

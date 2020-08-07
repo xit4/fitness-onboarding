@@ -26,3 +26,8 @@
   line-height: 19px;
   letter-spacing: 0.2px;
 }
+
+h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
