@@ -1,0 +1,30 @@
+.Tile {
+  height: 150px;
+  width: 150px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  --tile-main-color: var(--accent-main);
+  background-color: white;
+  color: var(--tile-main-color);
+  border: 2px solid var(--utilities-gray);
+}
+
+.Tile.red {
+  --tile-main-color: var(--accent-tertiary);
+}
+.Tile.yellow {
+  --tile-main-color: var(--accent-secondary);
+}
+.Tile.black {
+  --tile-main-color: var(--utilities-black);
+}
+
+.Tile.selected {
+  border-color: white;
+  color: var(--utilities-white-70);
+  background-color: var(--tile-main-color);
+}

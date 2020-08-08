@@ -1,35 +1,52 @@
 import React, { useState } from "react";
 import "./style.css";
-import WizardInputStep from "./WizardInputStep";
 import ProgressDots from "./ProgressDots";
+import Input from "../Input";
+import WizardStep from "./WizardStep";
+import Tile from "../Tile";
 
 const Wizard = () => {
   const [fullname, setFullname] = useState("");
   const [weight, setWeight] = useState("");
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(2);
 
   return (
     <div className="Wizard">
       <ProgressDots numberOfSteps={3} currentStep={currentStep} />
       {currentStep === 0 && (
-        <WizardInputStep
+        <WizardStep
           title="Hi there, how should we call you?"
-          placeholder="Your name"
-          value={fullname}
-          onInputChange={(e) => setFullname(e.target.value)}
           onConfirmation={() => setCurrentStep(1)}
-        />
+          disabled={!fullname}
+        >
+          <Input
+            placeholder="Your name"
+            value={fullname}
+            onChange={(e) => setFullname(e.target.value)}
+          />
+        </WizardStep>
       )}
       {currentStep === 1 && (
-        <WizardInputStep
+        <WizardStep
           title={`What's your weight, ${fullname}?`}
-          placeholder="Your weight"
-          value={weight}
-          inputType="number"
-          unit="Kg"
-          onInputChange={(e) => setWeight(e.target.value)}
           onConfirmation={() => setCurrentStep(1)}
-        />
+          disabled={!weight}
+        >
+          <Input
+            placeholder="Your weight"
+            value={weight}
+            onChange={(e) => setWeight(e.target.value)}
+            unit="Kg"
+          />
+        </WizardStep>
+      )}
+      {currentStep === 2 && (
+        <WizardStep title={`What's your preferred workout?`} disabled={!weight}>
+          <Tile />
+          <Tile selected color={Tile.color.yellow} />
+          <Tile color={Tile.color.red} />
+          <Tile color={Tile.color.black} />
+        </WizardStep>
       )}
     </div>
   );
