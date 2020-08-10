@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import { LabelInput } from "../Typography";
+import cn from "../../utils/classnames";
 
 const Input = ({
   placeholder = "",
@@ -9,8 +10,8 @@ const Input = ({
   unit = "",
   type = "text",
 }) => {
-  const className = `Input ${!!value ? "filled" : ""} ${!!unit ? "unit" : ""}`;
-  const wrapperClassName = `InputWrapper ${!!value ? "filled" : ""}`;
+  const className = cn("Input", { filled: !!value, unit: !!unit });
+  const wrapperClassName = cn("InputWrapper", { filled: !!value });
   return (
     <div className={wrapperClassName}>
       <input

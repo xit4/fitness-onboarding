@@ -8,7 +8,7 @@ import Tile from "../Tile";
 const Wizard = () => {
   const [fullname, setFullname] = useState("");
   const [weight, setWeight] = useState("");
-  const [currentStep, setCurrentStep] = useState(2);
+  const [currentStep, setCurrentStep] = useState(0);
 
   return (
     <div className="Wizard">
@@ -29,10 +29,11 @@ const Wizard = () => {
       {currentStep === 1 && (
         <WizardStep
           title={`What's your weight, ${fullname}?`}
-          onConfirmation={() => setCurrentStep(1)}
+          onConfirmation={() => setCurrentStep(2)}
           disabled={!weight}
         >
           <Input
+            type="number"
             placeholder="Your weight"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
