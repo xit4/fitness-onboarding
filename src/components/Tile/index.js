@@ -14,7 +14,7 @@ const Tile = ({
   onClick = () => {},
   selected = false,
   color = COLORS.purple,
-  image = "",
+  image: Image = "",
   label = "",
   description = "",
 }) => {
@@ -28,7 +28,7 @@ const Tile = ({
       })}
       onClick={onClick}
     >
-      <img src={image} alt={label} />
+      <Image />
       <TitleCard>{label}</TitleCard>
       <Paragraph>{description}</Paragraph>
     </div>

@@ -7,10 +7,10 @@ import Wizard from "../../components/Wizard";
 import { WORKOUT } from "../../constants/localStorageVariables";
 import paths from "../../constants/paths";
 import "./style.css";
-import Easy from "../../assets/Easy.svg";
-import Medium from "../../assets/Medium.svg";
-import Hard from "../../assets/Hard.svg";
-import Extreme from "../../assets/Extreme.svg";
+import { ReactComponent as Easy } from "../../assets/Easy.svg";
+import { ReactComponent as Medium } from "../../assets/Medium.svg";
+import { ReactComponent as Hard } from "../../assets/Hard.svg";
+import { ReactComponent as Extreme } from "../../assets/Extreme.svg";
 
 const WORKOUTS = {
   easy: "easy",
@@ -23,6 +23,10 @@ const Workout = () => {
   const [workout, setWorkout] = useLocalStorage(WORKOUT, null);
 
   const navigate = useNavigate();
+  const handleWorkoutClick = (value) => {
+    if (WORKOUTS[value] === workout) setWorkout(null);
+    else setWorkout(WORKOUTS[value]);
+  };
   return (
     <Wizard>
       <WizardStep
@@ -32,10 +36,37 @@ const Workout = () => {
         confirmationLabel="Complete"
       >
         <div className="TilesWrapper">
-          <Tile label="Easy" description="All you need to stay healthy" image={Easy} />
-          <Tile label="Medium" description="Not too easy, not too hard" image={Medium} color={Tile.color.yellow} />
-          <Tile label="Hard" description="Pretty intense workout" image={Hard} color={Tile.color.red} />
-          <Tile label="Extreme" description="Challenge yourself" image={Extreme} color={Tile.color.black} />
+          <Tile
+            label="Easy"
+            description="All you need to stay healthy"
+            image={Easy}
+            onClick={() => handleWorkoutClick(WORKOUTS.easy)}
+            selected={workout === WORKOUTS.easy}
+          />
+          <Tile
+            label="Medium"
+            description="Not too easy, not too hard"
+            image={Medium}
+            onClick={() => handleWorkoutClick(WORKOUTS.medium)}
+            selected={workout === WORKOUTS.medium}
+            color={Tile.color.yellow}
+          />
+          <Tile
+            label="Hard"
+            description="Pretty intense workout"
+            image={Hard}
+            onClick={() => handleWorkoutClick(WORKOUTS.hard)}
+            selected={workout === WORKOUTS.hard}
+            color={Tile.color.red}
+          />
+          <Tile
+            label="Extreme"
+            description="Challenge yourself"
+            image={Extreme}
+            onClick={() => handleWorkoutClick(WORKOUTS.extreme)}
+            selected={workout === WORKOUTS.extreme}
+            color={Tile.color.black}
+          />
         </div>
       </WizardStep>
     </Wizard>
