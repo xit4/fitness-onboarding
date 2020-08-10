@@ -7,11 +7,19 @@
   line-height: 23px;
   letter-spacing: 0.2px;
   position: relative;
-  background-color: var(--utilities-black);
+  background: linear-gradient(
+    to right,
+    var(--utilities-black) 50%,
+    var(--utilities-gray) 50%
+  );
+  background-size: 200% 100%;
+  background-position: left bottom;
   color: white;
+  transition: all cubic-bezier(0.785, 0.135, 0.15, 0.86) .5s;
 }
 
 .Button:disabled {
+  background-position: right bottom;
   background-color: var(--utilities-gray);
   color: var(--utilities-gray-darker);
 }

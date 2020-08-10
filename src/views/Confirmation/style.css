@@ -25,7 +25,7 @@
 
 .Confirmation .Button {
   align-self: stretch;
-  background-color: white;
+  background: white;
 }
 
 .Confirmation .LabelButton {
