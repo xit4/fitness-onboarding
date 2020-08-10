@@ -5,8 +5,18 @@
   align-items: center;
   height: 54px;
   padding: 10px 0 20px 0;
+  position: relative;
 }
 
-.Dot:not(:first-child) {
-  margin-left: 10px;
+.Dot:not(:last-child) {
+  margin-right: 10px;
+}
+
+.ProgressDots .LabelBack {
+  position: absolute;
+  left: 30px;
+  top: calc(50% - 3px);
+  transform: translateY(-50%);
+  color: white;
+  font-weight: bold;
 }

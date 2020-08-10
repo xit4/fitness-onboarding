@@ -5,8 +5,12 @@ import useLocalStorage from "../../utils/useLocalStorage";
 import { useNavigate } from "react-router-dom";
 import Wizard from "../../components/Wizard";
 import { WORKOUT } from "../../constants/localStorageVariables";
-import steps from "../../constants/steps";
 import paths from "../../constants/paths";
+import "./style.css";
+import Easy from "../../assets/Easy.svg";
+import Medium from "../../assets/Medium.svg";
+import Hard from "../../assets/Hard.svg";
+import Extreme from "../../assets/Extreme.svg";
 
 const WORKOUTS = {
   easy: "easy",
@@ -27,10 +31,12 @@ const Workout = () => {
         onConfirmation={() => navigate(paths.confirmation)}
         confirmationLabel="Complete"
       >
-        <Tile />
-        <Tile selected color={Tile.color.yellow} />
-        <Tile color={Tile.color.red} />
-        <Tile color={Tile.color.black} />
+        <div className="TilesWrapper">
+          <Tile label="Easy" description="All you need to stay healthy" image={Easy} />
+          <Tile label="Medium" description="Not too easy, not too hard" image={Medium} color={Tile.color.yellow} />
+          <Tile label="Hard" description="Pretty intense workout" image={Hard} color={Tile.color.red} />
+          <Tile label="Extreme" description="Challenge yourself" image={Extreme} color={Tile.color.black} />
+        </div>
       </WizardStep>
     </Wizard>
   );

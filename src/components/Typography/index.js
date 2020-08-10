@@ -17,8 +17,12 @@ const LabelInput = ({ children }) => {
   return <p className="LabelInput">{children}</p>;
 };
 
-const LabelBack = ({ children }) => {
-  return <p className="LabelBack">{children}</p>;
+const LabelBack = ({ children, onClick }) => {
+  return (
+    <p className="LabelBack" onClick={onClick}>
+      {children}
+    </p>
+  );
 };
 
 const LabelButton = ({ children }) => {

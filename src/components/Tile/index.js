@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import cn from "../../utils/classnames";
+import { TitleCard, Paragraph } from "../Typography";
 
 const COLORS = {
   red: "red",
@@ -13,6 +14,9 @@ const Tile = ({
   onClick = () => {},
   selected = false,
   color = COLORS.purple,
+  image = "",
+  label = "",
+  description = "",
 }) => {
   return (
     <div
@@ -23,7 +27,11 @@ const Tile = ({
         yellow: color === COLORS.yellow,
       })}
       onClick={onClick}
-    ></div>
+    >
+      <img src={image} alt={label} />
+      <TitleCard>{label}</TitleCard>
+      <Paragraph>{description}</Paragraph>
+    </div>
   );
 };
 
