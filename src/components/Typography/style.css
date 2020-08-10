@@ -23,8 +23,9 @@
 }
 .LabelButton {
   font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0.2px;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+  font-weight: bold;
 }
 
 h1 {

@@ -1,0 +1,33 @@
+.Confirmation {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+.Confirmation img {
+  margin-bottom: 43px;
+}
+
+.Confirmation .Title {
+  color: white;
+  font-weight: bold;
+}
+
+.Confirmation .Paragraph {
+  color: var(--utilities-white-70);
+  max-width: 255px;
+  margin-top: 20px;
+  margin-bottom: 64px;
+}
+
+.Confirmation .Button {
+  align-self: stretch;
+  background-color: white;
+}
+
+.Confirmation .LabelButton {
+  color: var(--utilities-black);
+}
