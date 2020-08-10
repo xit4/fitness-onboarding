@@ -40,3 +40,8 @@
   background-color: white;
   border: 3px solid var(--utilities-gray-darker);
 }
+
+.Input:focus::placeholder,
+.Input.filled::placeholder {
+  opacity: 0;
+}

@@ -61,7 +61,7 @@ const Workout = () => {
           />
           <Tile
             label="Extreme"
-            description="Challenge yourself"
+            description="Challenge yourself!"
             image={Extreme}
             onClick={() => handleWorkoutClick(WORKOUTS.extreme)}
             selected={workout === WORKOUTS.extreme}

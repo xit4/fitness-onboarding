@@ -4,8 +4,9 @@
   justify-content: center;
   align-items: center;
   height: 54px;
-  padding: 10px 0 20px 0;
   position: relative;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .Dot:not(:last-child) {
@@ -15,7 +16,7 @@
 .ProgressDots .LabelBack {
   position: absolute;
   left: 30px;
-  top: calc(50% - 3px);
+  top: calc(50% + 2px);
   transform: translateY(-50%);
   color: white;
   font-weight: bold;
