@@ -8,6 +8,7 @@ const WizardStep = ({
   disabled = false,
   onConfirmation = () => {},
   children,
+  confirmationLabel = "Continue",
 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +21,7 @@ const WizardStep = ({
       </div>
       {children}
       <Button onClick={onConfirmation} disabled={disabled}>
-        <LabelButton>Continue</LabelButton>
+        <LabelButton>{confirmationLabel}</LabelButton>
       </Button>
     </form>
   );

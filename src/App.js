@@ -1,11 +1,23 @@
 import React from "react";
-import Wizard from "./components/Wizard/";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Name from "./views/Name";
+import Weight from "./views/Weight";
+import Workout from "./views/Workout";
+import paths from "./constants/paths";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Wizard />
+      <BrowserRouter>
+        <Routes>
+          <Route path={paths.root} element={<Navigate to={paths.name} />} />
+          <Route path={paths.name} element={<Name />} />
+          <Route path={paths.weight} element={<Weight />} />
+          <Route path={paths.workout} element={<Workout />} />
+          <Route path={paths.confirmation} element={<Name />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
