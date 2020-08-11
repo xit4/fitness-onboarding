@@ -2,7 +2,7 @@ import React from "react";
 import Tile from "../../components/Tile";
 import WizardStep from "../../components/Wizard/WizardStep";
 import useLocalStorage from "../../utils/useLocalStorage";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { WORKOUT } from "../../constants/localStorageVariables";
 import paths from "../../constants/paths";
 import "./style.css";
@@ -21,7 +21,7 @@ const WORKOUTS = {
 const Workout = () => {
   const [workout, setWorkout] = useLocalStorage(WORKOUT, null);
 
-  const navigate = useNavigate();
+  const history = useHistory();
   const handleWorkoutClick = (value) => {
     if (WORKOUTS[value] === workout) setWorkout(null);
     else setWorkout(WORKOUTS[value]);
@@ -30,7 +30,7 @@ const Workout = () => {
     <WizardStep
       title={`What's your preferred workout?`}
       disabled={!workout}
-      onConfirmation={() => navigate(paths.confirmation)}
+      onConfirmation={() => history.push(paths.confirmation)}
       confirmationLabel="Complete"
     >
       <div className="TilesWrapper">

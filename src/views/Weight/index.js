@@ -2,7 +2,7 @@ import React from "react";
 import Input from "../../components/Input";
 import WizardStep from "../../components/Wizard/WizardStep";
 import useLocalStorage from "../../utils/useLocalStorage";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { WEIGHT, NAME } from "../../constants/localStorageVariables";
 import steps from "../../constants/steps";
 import paths from "../../constants/paths";
@@ -10,12 +10,12 @@ import paths from "../../constants/paths";
 const Weight = () => {
   const [weight, setWeight] = useLocalStorage(WEIGHT, "");
   const [fullname] = useLocalStorage(NAME, "");
-  const navigate = useNavigate();
+  const history = useHistory();
   const nextStep = steps.indexOf(paths.weight) + 1;
   return (
     <WizardStep
       title={`What's your weight, ${fullname}?`}
-      onConfirmation={() => navigate(steps[nextStep])}
+      onConfirmation={() => history.push(steps[nextStep])}
       disabled={!weight}
     >
       <Input

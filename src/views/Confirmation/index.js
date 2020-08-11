@@ -4,11 +4,11 @@ import Illustration2x from "../../assets/Illustration@2x.png";
 import { Title, Paragraph, LabelButton } from "../../components/Typography";
 import Button from "../../components/Button";
 import "./style.css";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import paths from "../../constants/paths";
 
 const Confirmation = () => {
-  const navigate = useNavigate();
+  const history = useHistory();
   return (
     <div className="Confirmation">
       <img
@@ -22,7 +22,7 @@ const Confirmation = () => {
         Personalized plan, diet and a fitness coach! Everything ready when you
         are, let's get started!
       </Paragraph>
-      <Button onClick={() => navigate(paths.name)}>
+      <Button onClick={() => history.push(paths.name)}>
         <LabelButton>Start your journey!</LabelButton>
       </Button>
     </div>
