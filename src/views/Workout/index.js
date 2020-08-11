@@ -3,7 +3,6 @@ import Tile from "../../components/Tile";
 import WizardStep from "../../components/Wizard/WizardStep";
 import useLocalStorage from "../../utils/useLocalStorage";
 import { useNavigate } from "react-router-dom";
-import Wizard from "../../components/Wizard";
 import { WORKOUT } from "../../constants/localStorageVariables";
 import paths from "../../constants/paths";
 import "./style.css";
@@ -28,48 +27,46 @@ const Workout = () => {
     else setWorkout(WORKOUTS[value]);
   };
   return (
-    <Wizard>
-      <WizardStep
-        title={`What's your preferred workout?`}
-        disabled={!workout}
-        onConfirmation={() => navigate(paths.confirmation)}
-        confirmationLabel="Complete"
-      >
-        <div className="TilesWrapper">
-          <Tile
-            label="Easy"
-            description="All you need to stay healthy"
-            image={Easy}
-            onClick={() => handleWorkoutClick(WORKOUTS.easy)}
-            selected={workout === WORKOUTS.easy}
-          />
-          <Tile
-            label="Medium"
-            description="Not too easy, not too hard"
-            image={Medium}
-            onClick={() => handleWorkoutClick(WORKOUTS.medium)}
-            selected={workout === WORKOUTS.medium}
-            color={Tile.color.yellow}
-          />
-          <Tile
-            label="Hard"
-            description="Pretty intense workout"
-            image={Hard}
-            onClick={() => handleWorkoutClick(WORKOUTS.hard)}
-            selected={workout === WORKOUTS.hard}
-            color={Tile.color.red}
-          />
-          <Tile
-            label="Extreme"
-            description="Challenge yourself!"
-            image={Extreme}
-            onClick={() => handleWorkoutClick(WORKOUTS.extreme)}
-            selected={workout === WORKOUTS.extreme}
-            color={Tile.color.black}
-          />
-        </div>
-      </WizardStep>
-    </Wizard>
+    <WizardStep
+      title={`What's your preferred workout?`}
+      disabled={!workout}
+      onConfirmation={() => navigate(paths.confirmation)}
+      confirmationLabel="Complete"
+    >
+      <div className="TilesWrapper">
+        <Tile
+          label="Easy"
+          description="All you need to stay healthy"
+          image={Easy}
+          onClick={() => handleWorkoutClick(WORKOUTS.easy)}
+          selected={workout === WORKOUTS.easy}
+        />
+        <Tile
+          label="Medium"
+          description="Not too easy, not too hard"
+          image={Medium}
+          onClick={() => handleWorkoutClick(WORKOUTS.medium)}
+          selected={workout === WORKOUTS.medium}
+          color={Tile.color.yellow}
+        />
+        <Tile
+          label="Hard"
+          description="Pretty intense workout"
+          image={Hard}
+          onClick={() => handleWorkoutClick(WORKOUTS.hard)}
+          selected={workout === WORKOUTS.hard}
+          color={Tile.color.red}
+        />
+        <Tile
+          label="Extreme"
+          description="Challenge yourself!"
+          image={Extreme}
+          onClick={() => handleWorkoutClick(WORKOUTS.extreme)}
+          selected={workout === WORKOUTS.extreme}
+          color={Tile.color.black}
+        />
+      </div>
+    </WizardStep>
   );
 };
 

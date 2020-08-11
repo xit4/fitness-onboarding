@@ -3,3 +3,4 @@
 - proper validation on inputs (number parsing)
 - find a better way to render wizard steps
 - animation on button not disabled
+- new line for name in weights?
