@@ -8,10 +8,23 @@ html {
   --utilities-gray-darker: #d7d5df;
   --utilities-black-70: #01033a70;
   --utilities-black: #01033a;
+  --transition-base: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 body {
   background-color: #7d7ef3;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 *,

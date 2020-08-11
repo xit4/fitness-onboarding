@@ -15,7 +15,7 @@
   background-size: 200% 100%;
   background-position: left bottom;
   color: white;
-  transition: all cubic-bezier(0.785, 0.135, 0.15, 0.86) .5s;
+  transition: all var(--transition-base);
 }
 
 .Button:disabled {

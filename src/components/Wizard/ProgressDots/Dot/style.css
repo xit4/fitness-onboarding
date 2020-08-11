@@ -4,6 +4,7 @@
   background-color: var(--utilities-white-40);
   border-radius: 50%;
   display: inline-block;
+  transition: all var(--transition-base);
 }
 
 .Dot.active {

@@ -11,6 +11,7 @@
   border: 2px solid var(--utilities-gray);
   padding: 20px 18px;
   text-align: center;
+  transition: all var(--transition-base);
 }
 
 .Tile.red {
@@ -38,12 +39,15 @@
   color: var(--utilities-white-70);
   background-color: var(--tile-main-color);
   box-shadow: 0px 2px 25px rgba(89, 90, 106, 0.25);
+  animation-name: pop;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
 }
 
 .Tile.selected .TitleCard {
   color: white;
 }
 
-.Tile.Tile.selected .Paragraph {
+.Tile.selected .Paragraph {
   color: unset;
 }
