@@ -9,6 +9,7 @@ html {
   --utilities-black-70: #01033a70;
   --utilities-black: #01033a;
   --transition-base: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  --transition-slow: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 body {
