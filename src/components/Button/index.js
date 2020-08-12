@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import debounce from "../../utils/debounce";
 
 const Button = ({
   onClick = () => {},
@@ -7,12 +8,13 @@ const Button = ({
   children,
   type = "button",
 }) => {
+  const handleOnClick = debounce(onClick, 200);
   return (
     <button
       type={type}
       className="Button"
       disabled={disabled}
-      onClick={onClick}
+      onClick={handleOnClick}
     >
       {children}
     </button>
