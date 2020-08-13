@@ -19,13 +19,13 @@
 .Confirmation .Paragraph {
   color: var(--utilities-white-70);
   max-width: 255px;
-  margin-top: 20px;
-  margin-bottom: 64px;
+  margin-bottom: 20px;
 }
 
 .Confirmation .Button {
   align-self: stretch;
   background: white;
+  margin-top: 64px;
 }
 
 .Confirmation .LabelButton {

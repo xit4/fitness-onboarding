@@ -16,12 +16,12 @@ const Confirmation = () => {
         src={Illustration}
         srcSet={`${Illustration} 2x, ${Illustration2x} 1x`}
       />
-      <Title>You did it!</Title>
-      <Title>Let's get moving!</Title>
       <Paragraph>
         Personalized plan, diet and a fitness coach! Everything ready when you
         are, let's get started!
       </Paragraph>
+      <Title>You did it!</Title>
+      <Title>Let's get moving!</Title>
       <Button onClick={() => history.push(paths.name)}>
         <LabelButton>Start your journey!</LabelButton>
       </Button>
